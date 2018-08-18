@@ -8,11 +8,18 @@ namespace Assets.Scripts.Player
 	{
 		[SerializeField]
 		private float _moveSpeed = 10f;
+		[SerializeField]
+		private float _padding = 1f;
+        private float _xMin;
+		private float _xMax;
+		private float _yMin;
+		private float _yMax;
+
 
 		// Use this for initialization
 		void Start () 
 		{
-			
+			SetBoundaries();
 		}
 		
 		// Update is called once per frame
@@ -26,10 +33,20 @@ namespace Assets.Scripts.Player
 			var deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * _moveSpeed;
 			var deltaY = Input.GetAxis("Vertical") * Time.deltaTime * _moveSpeed;
 
-			var newXPosition = transform.position.x + deltaX;
-			var newYPosition = transform.position.y + deltaY;
+			var newXPosition = Mathf.Clamp(transform.position.x + deltaX, _xMin, _xMax);
+			var newYPosition = Mathf.Clamp(transform.position.y + deltaY, _yMin, _yMax);
 
 			transform.position = new Vector2(newXPosition, newYPosition);
+		}
+
+		private void SetBoundaries()
+		{
+			var gameCamera = Camera.main;
+
+			_xMin = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).x + _padding;
+			_xMax = gameCamera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x - _padding;
+			_yMin = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).y + _padding;
+			_yMax = gameCamera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y - _padding;
 		}
 	}
 }
