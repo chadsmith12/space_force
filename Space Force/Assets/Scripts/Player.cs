@@ -14,12 +14,14 @@ namespace Assets.Scripts.Player
 		private GameObject _laserPrefab;
 		[SerializeField]
 		private float _projectileSpeed = 10f;
-
+		[SerializeField]
+		private float _projectileFiringPeriod = 0.5f;
 
         private float _xMin;
 		private float _xMax;
 		private float _yMin;
 		private float _yMax;
+		private Coroutine _firingCoroutine;
 
 
 		// Use this for initialization
@@ -58,11 +60,28 @@ namespace Assets.Scripts.Player
 
 		private void Fire()
 		{
+			// fire the projectiles continously when holding down fire.
+			// when you let up the button stop the continously firing.
 			if(Input.GetButtonDown("Fire1"))
+			{
+				_firingCoroutine = StartCoroutine(FireContinuously());
+			}
+			if(Input.GetButtonUp("Fire1"))
+			{
+				StopCoroutine(_firingCoroutine);
+			}
+		}
+
+		IEnumerator FireContinuously()
+		{
+			while(true)
 			{
 				var projectile = Instantiate(_laserPrefab, transform.position, Quaternion.identity);
 				projectile.GetComponent<Rigidbody2D>().velocity = new Vector2(0, _projectileSpeed);
+
+				yield return new WaitForSeconds(_projectileFiringPeriod);
 			}
+
 		}
 	}
 }
