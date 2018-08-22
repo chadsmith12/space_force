@@ -22,6 +22,7 @@ namespace Assets.Scripts.Player
 		private float _yMin;
 		private float _yMax;
 		private Coroutine _firingCoroutine;
+		private float _nextFire = 0.0f;
 
 
 		// Use this for initialization
@@ -62,8 +63,9 @@ namespace Assets.Scripts.Player
 		{
 			// fire the projectiles continously when holding down fire.
 			// when you let up the button stop the continously firing.
-			if(Input.GetButtonDown("Fire1"))
+			if(Input.GetButtonDown("Fire1") && Time.time > _nextFire)
 			{
+				_nextFire = Time.time + _projectileFiringPeriod;
 				_firingCoroutine = StartCoroutine(FireContinuously());
 			}
 			if(Input.GetButtonUp("Fire1"))
