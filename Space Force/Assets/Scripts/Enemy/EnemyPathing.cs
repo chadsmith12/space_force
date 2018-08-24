@@ -1,20 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 namespace Assets.Scripts.Enemy
 {
 	public class EnemyPathing : MonoBehaviour 
 	{
-		[SerializeField]
-		private List<Transform> _waypoints;
-		[SerializeField]
-		private float _moveSpeed = 2f;
+		[SerializeField] private float _moveSpeed = 2f;
+		[SerializeField] WaveConfig _waveConfig;
 
 		private int _currentIndex = 0;
-
-		void Start()
+		private List<Transform> _waypoints;
+		void Awake()
 		{
+			_waypoints = _waveConfig.Waypoints.ToList();
 			// start at the first waypoint.
 			transform.position = _waypoints[_currentIndex].position;
 		}
