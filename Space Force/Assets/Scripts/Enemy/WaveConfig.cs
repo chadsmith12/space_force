@@ -23,12 +23,12 @@ public class WaveConfig : ScriptableObject
 		}
 	}
 	// Gets the prefab for this path.
-	public IEnumerable<Transform> Waypoints
+	public List<Transform> Waypoints
 	{
 		get 
 		{
 			var waveWayPoints = _pathPrefab.transform.OfType<Transform>().Select(child => child);
-			return waveWayPoints;
+			return waveWayPoints.ToList();
 		}
 	}
 	// Gets the time between enemy spawns.

@@ -7,12 +7,11 @@ namespace Assets.Scripts.Enemy
 {
 	public class EnemyPathing : MonoBehaviour 
 	{
-		[SerializeField] private float _moveSpeed = 2f;
-		[SerializeField] WaveConfig _waveConfig;
-
+		private WaveConfig _waveConfig;
 		private int _currentIndex = 0;
 		private List<Transform> _waypoints;
-		void Awake()
+
+		void Start()
 		{
 			_waypoints = _waveConfig.Waypoints.ToList();
 			// start at the first waypoint.
@@ -24,13 +23,18 @@ namespace Assets.Scripts.Enemy
 			MoveTowardsWavePoint();
 		}
 
+		public void SetWaveConfig(WaveConfig waveConfig)
+		{
+			_waveConfig = waveConfig;
+		}
+
 		private void MoveTowardsWavePoint()
 		{
 			// haven't reached the end of the waypoints path yet, move towards the next one
 			if(_currentIndex <= _waypoints.Count - 1)
 			{
 				var targetPosition = _waypoints[_currentIndex].transform.position;
-				var frameMovement = _moveSpeed * Time.deltaTime;
+				var frameMovement = _waveConfig.MoveSpeed * Time.deltaTime;
 
 				transform.position = Vector2.MoveTowards(transform.position, targetPosition, frameMovement);
 

@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212984502315238754}
   - component: {fileID: 114172371175165596}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Enemy Green]
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52,8 +52,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7905e8fa3dfe77944b7e1f32cdc22ad8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 2
-  _waveConfig: {fileID: 11400000, guid: aace07dc23c1f284c96188fb6eb7f794, type: 2}
 --- !u!212 &212984502315238754
 SpriteRenderer:
   m_ObjectHideFlags: 1
