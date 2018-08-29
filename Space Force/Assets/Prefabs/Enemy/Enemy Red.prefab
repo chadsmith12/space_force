@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4955959672252418}
   - component: {fileID: 212984502315238754}
   - component: {fileID: 114172371175165596}
+  - component: {fileID: 114053043391866044}
+  - component: {fileID: 58772007787281870}
   m_Layer: 0
   m_Name: Enemy Red
   m_TagString: Untagged
@@ -41,6 +43,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &58772007787281870
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1983911167207158}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.4083726
+--- !u!114 &114053043391866044
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1983911167207158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b3abb05ce418fd4cb4f112273dc33d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 100
 --- !u!114 &114172371175165596
 MonoBehaviour:
   m_ObjectHideFlags: 1
