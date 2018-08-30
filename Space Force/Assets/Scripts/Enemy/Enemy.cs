@@ -2,23 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour 
+namespace Enemy 
 {
-	[SerializeField] private float _health = 100;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () 
+	public class Enemy : MonoBehaviour 
 	{
+		[SerializeField] private float _health = 100;
 		
-	}
+		void OnTriggerEnter2D(Collider2D other)
+		{
+			var damageDealer = other.gameObject.GetComponent<DamageDealer>();
+			ProcessHit(damageDealer);
+		}
+		private void ProcessHit(DamageDealer damageDealer)
+		{
+			_health -= damageDealer.Damage;
 
-	void OnTriggerEnter2D(Collider2D other)
-	{
-		var damageDealer = other.gameObject.GetComponent<DamageDealer>();
-		_health -= damageDealer.Damage;
+			if(_health <= 0) 
+			{
+				Destroy(gameObject);
+			}
+		}
 	}
 }
+
