@@ -70,6 +70,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 100
+  _shotCounter: 0
+  _minTimeBetweenShots: 0.2
+  _maxTimeBetweenShots: 3
+  _projectilePrefab: {fileID: 1788879973888598, guid: a8057132e523b7b4cbe36a5fce94b06b,
+    type: 2}
+  _projectileSpeed: -10
 --- !u!114 &114172371175165596
 MonoBehaviour:
   m_ObjectHideFlags: 1
