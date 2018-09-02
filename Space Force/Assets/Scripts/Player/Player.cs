@@ -79,7 +79,7 @@ namespace Assets.Scripts.Player
 			}
 		}
 
-		IEnumerator FireContinuously()
+		private IEnumerator FireContinuously()
 		{
 			while(true)
 			{
@@ -90,8 +90,6 @@ namespace Assets.Scripts.Player
 			}
 
 		}
-
-
 
 		private void ProcessHit(DamageDealer damageDealer)
 		{
