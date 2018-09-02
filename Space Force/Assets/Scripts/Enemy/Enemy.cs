@@ -11,6 +11,7 @@ namespace Enemy
 		[SerializeField] private float _minTimeBetweenShots = 0.2f;
 		[SerializeField] private float _maxTimeBetweenShots = 3f;
 		[SerializeField] private GameObject _projectilePrefab;
+		[SerializeField] private GameObject _explosionPrefab;
 		[SerializeField] private float _projectileSpeed = 10f;
 
 		void Start() 
@@ -21,6 +22,16 @@ namespace Enemy
 		void Update()
 		{
 			CountDownAndShoot();
+		}
+
+		void OnTriggerEnter2D(Collider2D other)
+		{
+			var damageDealer = other.gameObject.GetComponent<DamageDealer>();
+
+			if(damageDealer != null)
+			{
+				ProcessHit(damageDealer);
+			}
 		}
 
 		private void CountDownAndShoot() 
@@ -47,16 +58,6 @@ namespace Enemy
 			projectile.GetComponent<Rigidbody2D>().velocity = new Vector2(0, _projectileSpeed);
 		}
 
-		void OnTriggerEnter2D(Collider2D other)
-		{
-			var damageDealer = other.gameObject.GetComponent<DamageDealer>();
-			
-			if(damageDealer != null)
-			{
-				ProcessHit(damageDealer);
-			}
-		}
-
 		private void ProcessHit(DamageDealer damageDealer)
 		{
 			_health -= damageDealer.Damage;
@@ -64,8 +65,22 @@ namespace Enemy
 
 			if(_health <= 0) 
 			{
-				Destroy(gameObject);
+				DestroyEnemy();
 			}
+		}
+
+		private void DestroyEnemy() 
+		{
+			StartCoroutine(Explode());
+			Destroy(gameObject);
+		}
+
+		private IEnumerator Explode()
+		{
+			var explosion = Instantiate(_explosionPrefab, transform.position, Quaternion.identity);
+			yield return new WaitForSeconds(1);
+
+			Destroy(explosion);
 		}
 	}
 }
