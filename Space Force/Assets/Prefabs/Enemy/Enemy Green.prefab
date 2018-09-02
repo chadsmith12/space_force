@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114320374840968410}
   - component: {fileID: 58499873986885602}
   m_Layer: 0
-  m_Name: Enemy Green]
+  m_Name: Enemy Green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,7 +64,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1983911167207158}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7905e8fa3dfe77944b7e1f32cdc22ad8, type: 3}
   m_Name: 

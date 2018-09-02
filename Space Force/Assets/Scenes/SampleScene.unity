@@ -241,10 +241,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114206801219490118, guid: 200c497a4a26ceb408292359cebca08b,
+    - target: {fileID: 60179490129418578, guid: 200c497a4a26ceb408292359cebca08b,
         type: 2}
-      propertyPath: _projectileFiringPeriod
-      value: 0.1
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 200c497a4a26ceb408292359cebca08b, type: 2}
@@ -386,9 +386,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _waveConfigs:
   - {fileID: 11400000, guid: aace07dc23c1f284c96188fb6eb7f794, type: 2}
-  - {fileID: 11400000, guid: 950e691d7c2ad404d8caa8c4b411ea62, type: 2}
-  - {fileID: 11400000, guid: 1b63f5a4c92e0be4ba2c8ae514d2fe1a, type: 2}
-  - {fileID: 11400000, guid: a888de0560c543a458506b172c0782de, type: 2}
   _isLooping: 1
 --- !u!4 &1217006303
 Transform:
