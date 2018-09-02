@@ -50,12 +50,17 @@ namespace Enemy
 		void OnTriggerEnter2D(Collider2D other)
 		{
 			var damageDealer = other.gameObject.GetComponent<DamageDealer>();
-			ProcessHit(damageDealer);
+			
+			if(damageDealer != null)
+			{
+				ProcessHit(damageDealer);
+			}
 		}
 
 		private void ProcessHit(DamageDealer damageDealer)
 		{
 			_health -= damageDealer.Damage;
+			damageDealer.Hit();
 
 			if(_health <= 0) 
 			{

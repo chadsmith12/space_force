@@ -94,6 +94,7 @@ namespace Assets.Scripts.Player
 		private void ProcessHit(DamageDealer damageDealer)
 		{
 			_health -= damageDealer.Damage;
+			damageDealer.Hit();
 
 			if(_health <= 0) 
 			{
