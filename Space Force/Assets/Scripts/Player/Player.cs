@@ -6,16 +6,15 @@ namespace Assets.Scripts.Player
 {
 	public class Player : MonoBehaviour 
 	{
-		[SerializeField]
-		private float _moveSpeed = 10f;
-		[SerializeField]
-		private float _padding = 1f;
-		[SerializeField]
-		private GameObject _laserPrefab;
-		[SerializeField]
-		private float _projectileSpeed = 10f;
-		[SerializeField]
-		private float _projectileFiringPeriod = 0.5f;
+		[Header("Player")]
+		[SerializeField] private float _moveSpeed = 10f;
+		[SerializeField] private float _padding = 1f;
+		[SerializeField] private int _health = 200;
+
+		[Header("Projectile")]
+		[SerializeField] private GameObject _laserPrefab;
+		[SerializeField] private float _projectileSpeed = 10f;
+		[SerializeField] private float _projectileFiringPeriod = 0.5f;
 
         private float _xMin;
 		private float _xMax;
@@ -36,6 +35,12 @@ namespace Assets.Scripts.Player
 		{
 			Move();
 			Fire();
+		}
+
+		void OnTriggerEnter2D(Collider2D other)
+		{
+			var damageDealer = other.gameObject.GetComponent<DamageDealer>();
+			ProcessHit(damageDealer);
 		}
 
 		private void Move()
@@ -84,6 +89,18 @@ namespace Assets.Scripts.Player
 				yield return new WaitForSeconds(_projectileFiringPeriod);
 			}
 
+		}
+
+
+
+		private void ProcessHit(DamageDealer damageDealer)
+		{
+			_health -= damageDealer.Damage;
+
+			if(_health <= 0) 
+			{
+				Destroy(gameObject);
+			}
 		}
 	}
 }
