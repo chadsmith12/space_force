@@ -75,6 +75,8 @@ MonoBehaviour:
   _maxTimeBetweenShots: 3
   _projectilePrefab: {fileID: 1788879973888598, guid: a8057132e523b7b4cbe36a5fce94b06b,
     type: 2}
+  _explosionPrefab: {fileID: 1261564158426618, guid: 60df5a2da6763c34bb0ef3dd797cd124,
+    type: 2}
   _projectileSpeed: -10
 --- !u!114 &114172371175165596
 MonoBehaviour:
