@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.Gameplay;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,6 +17,9 @@ namespace Assets.Scripts.Player
 		[SerializeField] private float _projectileSpeed = 10f;
 		[SerializeField] private float _projectileFiringPeriod = 0.5f;
 
+        [Header("Sound")]
+        [SerializeField] private PlayerSoundEffects _playerSoundEffects;
+
         private float _xMin;
 		private float _xMax;
 		private float _yMin;
@@ -23,9 +27,8 @@ namespace Assets.Scripts.Player
 		private Coroutine _firingCoroutine;
 		private float _nextFire = 0.0f;
 
-
-		// Use this for initialization
-		void Start () 
+        // Use this for initialization
+        void Start () 
 		{
 			SetBoundaries();
 		}
@@ -86,6 +89,7 @@ namespace Assets.Scripts.Player
 				var projectile = Instantiate(_laserPrefab, transform.position, Quaternion.identity);
 				projectile.GetComponent<Rigidbody2D>().velocity = new Vector2(0, _projectileSpeed);
 
+                _playerSoundEffects.ShootSound.Play();
 				yield return new WaitForSeconds(_projectileFiringPeriod);
 			}
 
@@ -98,8 +102,14 @@ namespace Assets.Scripts.Player
 
 			if(_health <= 0) 
 			{
-				Destroy(gameObject);
+                DestroyPlayer();
 			}
 		}
+
+        private void DestroyPlayer()
+        {
+            Destroy(gameObject);
+            _playerSoundEffects.DeathSound.Play();
+        }
 	}
 }

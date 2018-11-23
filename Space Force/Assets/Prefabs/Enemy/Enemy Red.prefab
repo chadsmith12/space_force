@@ -78,6 +78,7 @@ MonoBehaviour:
   _explosionPrefab: {fileID: 1261564158426618, guid: 60df5a2da6763c34bb0ef3dd797cd124,
     type: 2}
   _projectileSpeed: -10
+  _enemySoundEffects: {fileID: 11400000, guid: 6945137d8514ea247abd9ebbbe530c37, type: 2}
 --- !u!114 &114172371175165596
 MonoBehaviour:
   m_ObjectHideFlags: 1

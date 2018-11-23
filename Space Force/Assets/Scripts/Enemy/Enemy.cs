@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.Enemy;
+using Assets.Scripts.Gameplay;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,8 +15,9 @@ namespace Enemy
 		[SerializeField] private GameObject _projectilePrefab;
 		[SerializeField] private GameObject _explosionPrefab;
 		[SerializeField] private float _projectileSpeed = 10f;
+        [SerializeField] private EnemySoundEffects _enemySoundEffects;
 
-		void Start() 
+        void Start() 
 		{
 			ResetShotCounter();
 		}
@@ -56,6 +59,8 @@ namespace Enemy
 		{
 			var projectile = Instantiate(_projectilePrefab, transform.position, Quaternion.identity);
 			projectile.GetComponent<Rigidbody2D>().velocity = new Vector2(0, _projectileSpeed);
+
+            _enemySoundEffects.ShootSound.Play();
 		}
 
 		private void ProcessHit(DamageDealer damageDealer)
@@ -73,6 +78,7 @@ namespace Enemy
 		{
 			StartCoroutine(Explode());
 			Destroy(gameObject);
+            _enemySoundEffects.DeathSound.Play();
 		}
 
 		private IEnumerator Explode()

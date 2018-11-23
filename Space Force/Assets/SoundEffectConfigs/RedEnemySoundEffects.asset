@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68dfe449f5fb61c42bed31c7fe2de413, type: 3}
+  m_Name: RedEnemySoundEffects
+  m_EditorClassIdentifier: 
+  _enemyDeathSoundConfig:
+    AudioClip: {fileID: 8300000, guid: ba23216a140d48f498da2f828cb12a2c, type: 3}
+    Volume: 0.75
+  _enemyShootSoundConfig:
+    AudioClip: {fileID: 8300000, guid: 65351c6adff578344bfc8ad7f4034f03, type: 3}
+    Volume: 0.65
