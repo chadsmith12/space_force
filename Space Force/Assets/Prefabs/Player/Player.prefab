@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212054798765379796}
   - component: {fileID: 114206801219490118}
   - component: {fileID: 60179490129418578}
+  - component: {fileID: 114913327271173570}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -108,6 +109,21 @@ MonoBehaviour:
     type: 2}
   _projectileSpeed: 10
   _projectileFiringPeriod: 0.1
+  _playerSoundEffects: {fileID: 11400000, guid: 923c7b5c5f8aa4841ace0e119a3ec3e8,
+    type: 2}
+--- !u!114 &114913327271173570
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1948601670839778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bd04f36cca776b4fa44c16334940cd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _soundEffect: {fileID: 8300000, guid: ba23216a140d48f498da2f828cb12a2c, type: 3}
+  _volume: 0.75
 --- !u!212 &212054798765379796
 SpriteRenderer:
   m_ObjectHideFlags: 1

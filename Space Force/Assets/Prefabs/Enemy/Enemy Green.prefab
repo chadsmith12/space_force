@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114172371175165596}
   - component: {fileID: 114320374840968410}
   - component: {fileID: 58499873986885602}
+  - component: {fileID: 114119325589146674}
   m_Layer: 9
   m_Name: Enemy Green
   m_TagString: Untagged
@@ -58,6 +59,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.40837258
+--- !u!114 &114119325589146674
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1983911167207158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bd04f36cca776b4fa44c16334940cd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _soundEffect: {fileID: 8300000, guid: ba23216a140d48f498da2f828cb12a2c, type: 3}
+  _volume: 0.75
 --- !u!114 &114172371175165596
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -89,6 +103,7 @@ MonoBehaviour:
   _explosionPrefab: {fileID: 1261564158426618, guid: 60df5a2da6763c34bb0ef3dd797cd124,
     type: 2}
   _projectileSpeed: -10
+  _enemySoundEffects: {fileID: 11400000, guid: 55327136c39167741bd5bc947ce6c3f1, type: 2}
 --- !u!212 &212984502315238754
 SpriteRenderer:
   m_ObjectHideFlags: 1
