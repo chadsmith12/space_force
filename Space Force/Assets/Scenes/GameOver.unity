@@ -341,7 +341,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2064526309}
-        m_MethodName: LoadStartMenu
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -592,7 +592,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2064526309}
-        m_MethodName: LoadGame
+        m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1037,4 +1037,4 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114763230039891416, guid: 69366bddf1e5e814b8ae16102f5c34dc,
     type: 2}
   m_PrefabInternal: {fileID: 2064526307}
-  m_Script: {fileID: 11500000, guid: 9717daf0169dc5d4f81192e2c6b739e8, type: 3}
+  m_Script: {fileID: 11500000, guid: 35c52eb8c61376f4991d8384be9cb2f7, type: 3}

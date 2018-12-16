@@ -592,7 +592,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2064526309}
-        m_MethodName: LoadGame
+        m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -771,6 +771,48 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3399ceb2910ee1c4fa357a255ce90ca1, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &1582565758
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4410023186533512, guid: 69366bddf1e5e814b8ae16102f5c34dc, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.1421633
+      objectReference: {fileID: 0}
+    - target: {fileID: 4410023186533512, guid: 69366bddf1e5e814b8ae16102f5c34dc, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.0978092
+      objectReference: {fileID: 0}
+    - target: {fileID: 4410023186533512, guid: 69366bddf1e5e814b8ae16102f5c34dc, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 2.1132812
+      objectReference: {fileID: 0}
+    - target: {fileID: 4410023186533512, guid: 69366bddf1e5e814b8ae16102f5c34dc, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4410023186533512, guid: 69366bddf1e5e814b8ae16102f5c34dc, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4410023186533512, guid: 69366bddf1e5e814b8ae16102f5c34dc, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4410023186533512, guid: 69366bddf1e5e814b8ae16102f5c34dc, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4410023186533512, guid: 69366bddf1e5e814b8ae16102f5c34dc, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 69366bddf1e5e814b8ae16102f5c34dc, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1815322450
 GameObject:
@@ -990,51 +1032,9 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1919229520}
   m_CullTransparentMesh: 0
---- !u!1001 &2064526307
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4410023186533512, guid: 69366bddf1e5e814b8ae16102f5c34dc, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 2.1421633
-      objectReference: {fileID: 0}
-    - target: {fileID: 4410023186533512, guid: 69366bddf1e5e814b8ae16102f5c34dc, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -1.0978092
-      objectReference: {fileID: 0}
-    - target: {fileID: 4410023186533512, guid: 69366bddf1e5e814b8ae16102f5c34dc, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 2.1132812
-      objectReference: {fileID: 0}
-    - target: {fileID: 4410023186533512, guid: 69366bddf1e5e814b8ae16102f5c34dc, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4410023186533512, guid: 69366bddf1e5e814b8ae16102f5c34dc, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4410023186533512, guid: 69366bddf1e5e814b8ae16102f5c34dc, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4410023186533512, guid: 69366bddf1e5e814b8ae16102f5c34dc, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4410023186533512, guid: 69366bddf1e5e814b8ae16102f5c34dc, type: 2}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 69366bddf1e5e814b8ae16102f5c34dc, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!114 &2064526309 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114763230039891416, guid: 69366bddf1e5e814b8ae16102f5c34dc,
     type: 2}
-  m_PrefabInternal: {fileID: 2064526307}
-  m_Script: {fileID: 11500000, guid: 9717daf0169dc5d4f81192e2c6b739e8, type: 3}
+  m_PrefabInternal: {fileID: 1582565758}
+  m_Script: {fileID: 11500000, guid: 35c52eb8c61376f4991d8384be9cb2f7, type: 3}
