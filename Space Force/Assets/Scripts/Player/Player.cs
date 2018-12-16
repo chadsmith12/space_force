@@ -110,6 +110,7 @@ namespace Assets.Scripts.Player
         {
             Destroy(gameObject);
             _playerSoundEffects.DeathSound.Play();
+            LevelManagment.LoadGameOver();
         }
 	}
 }
