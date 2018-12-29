@@ -265,6 +265,48 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4450a055368e22f4f85ec39901c509b1, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1001 &463075262
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4594536324227392, guid: de36fa20d5314e0438df07f3a2a3f33e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594536324227392, guid: de36fa20d5314e0438df07f3a2a3f33e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594536324227392, guid: de36fa20d5314e0438df07f3a2a3f33e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594536324227392, guid: de36fa20d5314e0438df07f3a2a3f33e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594536324227392, guid: de36fa20d5314e0438df07f3a2a3f33e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594536324227392, guid: de36fa20d5314e0438df07f3a2a3f33e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594536324227392, guid: de36fa20d5314e0438df07f3a2a3f33e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594536324227392, guid: de36fa20d5314e0438df07f3a2a3f33e, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: de36fa20d5314e0438df07f3a2a3f33e, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &708568069
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,7 +383,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2064526309}
-        m_MethodName: QuitGame
+        m_MethodName: StartMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
