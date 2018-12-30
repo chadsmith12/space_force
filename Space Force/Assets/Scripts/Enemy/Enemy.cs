@@ -7,13 +7,19 @@ namespace Enemy
 {
 	public class Enemy : MonoBehaviour 
 	{
+        [Header("Enemy Stats")]
 		[SerializeField] private float _health = 100;
-		[SerializeField] private float _shotCounter;
+        [SerializeField] private int _scoreValue = 150;
+
+        [Header("Shooting")]
+        [SerializeField] private float _shotCounter;
 		[SerializeField] private float _minTimeBetweenShots = 0.2f;
 		[SerializeField] private float _maxTimeBetweenShots = 3f;
 		[SerializeField] private GameObject _projectilePrefab;
 		[SerializeField] private GameObject _explosionPrefab;
 		[SerializeField] private float _projectileSpeed = 10f;
+
+        [Header("Sound Effects")]
         [SerializeField] private EnemySoundEffects _enemySoundEffects;
 
         void Start() 
@@ -78,6 +84,8 @@ namespace Enemy
 			StartCoroutine(Explode());
 			Destroy(gameObject);
             _enemySoundEffects.DeathSound.Play();
+
+            GameSession.Instance.AddToScore(_scoreValue);
 		}
 
 		private IEnumerator Explode()

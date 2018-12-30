@@ -12,6 +12,7 @@ namespace Assets.Scripts.Gameplay
         public void StartGame()
         {
             LevelManagment.LoadGame();
+            GameSession.Instance.ResetGame();
         }
 
         public void QuitGame()

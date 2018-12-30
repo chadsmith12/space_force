@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _soundEffect: {fileID: 8300000, guid: ba23216a140d48f498da2f828cb12a2c, type: 3}
-  _volume: 0.75
+  _volume: 1
 --- !u!114 &114172371175165596
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -117,6 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 100
+  _scoreValue: 150
   _shotCounter: 0
   _minTimeBetweenShots: 0.2
   _maxTimeBetweenShots: 3
