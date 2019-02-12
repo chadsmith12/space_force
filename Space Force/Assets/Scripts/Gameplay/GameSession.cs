@@ -14,6 +14,7 @@ namespace Assets.Scripts.Gameplay
         /// </summary>
         public int CurrentScore { get; private set; }
 
+
         void Awake()
         {
             if (Instance != null && Instance != this)
