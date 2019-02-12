@@ -12,7 +12,7 @@ namespace Enemy
         [SerializeField] private int _scoreValue = 150;
 
         [Header("Shooting")]
-        [SerializeField] private float _shotCounter;
+        private float _shotCounter;
 		[SerializeField] private float _minTimeBetweenShots = 0.2f;
 		[SerializeField] private float _maxTimeBetweenShots = 3f;
 		[SerializeField] private GameObject _projectilePrefab;
