@@ -27,6 +27,17 @@ namespace Assets.Scripts.Player
 		private Coroutine _firingCoroutine;
 		private float _nextFire = 0.0f;
 
+        /// <summary>
+        /// Gets the current health of the player.
+        /// </summary>
+        public int CurrentHealth
+        {
+            get
+            {
+                return _health;
+            }
+        }
+
         // Use this for initialization
         void Start () 
 		{
